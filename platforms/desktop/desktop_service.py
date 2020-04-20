@@ -80,13 +80,18 @@ class DesktopService(Service):
         lis.append(exep)
         if opt != "":
             lis.append(opt)
-        lis.append(files_paths[:-1])
-        if self._load_from_stdin_option != "":
+        if files_paths != "":
+            lis.append(files_paths[:-1])
+        if self._load_from_stdin_option != "" and final_program != "":
             lis.append(self._load_from_stdin_option)
 
-        print(exep + " " + opt + " " + files_paths +
-              self._load_from_stdin_option)
-
+        print(exep + " " + opt + " " + files_paths, end='')
+        
+        if final_program != "":
+            print(self._load_from_stdin_option)
+        else:
+            print()
+       
         start = int(time.time() * 1e+9)
 
         proc = subprocess.Popen(
