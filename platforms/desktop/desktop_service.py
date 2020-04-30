@@ -81,7 +81,9 @@ class DesktopService(Service):
         if opt != "":
             lis.append(opt)
         if files_paths != "":
-            lis.append(files_paths[:-1])
+            paths = files_paths[:-1].split(' ')
+            for path in paths:
+                lis.append(path)
         if self._load_from_stdin_option != "" and final_program != "":
             lis.append(self._load_from_stdin_option)
 
