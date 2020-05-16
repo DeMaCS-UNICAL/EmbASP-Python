@@ -14,7 +14,7 @@ class DesktopService(Service):
     def __init__(self, exe_path):
         self._exe_path = exe_path  # Stores solver's executable path
         # Stores option string in order to enable solver to read from standard input
-        self._load_from_stdin_option = None
+        self._load_from_STDIN_option = None
 
     def get_exe_path(self):
         """Return execution path of DesktopService."""
@@ -58,14 +58,13 @@ class DesktopService(Service):
                 print("Warning : wrong " +
                       str(OptionDescriptor().__class__.__name__))
                 
-        files_paths = list()
+        
         final_program = ""
+        files_paths = list()
         for p in programs:
             if p is not None:
                 final_program += p.get_programs()
-                for path in p.get_files_paths():
-                    if len(path) != 0:
-                        files_paths.append(path)
+                files_paths.extend(p.get_files_paths())
             else:
                 print("Warning : wrong " +
                       str(InputProgram().__class__.__name__))
@@ -80,10 +79,9 @@ class DesktopService(Service):
         lis.append(exep)
         if opt != "":
             lis.append(opt)
-        for path in files_paths:
-            lis.append(path)
-        if self._load_from_stdin_option != "" and final_program != "":
-            lis.append(self._load_from_stdin_option)
+        lis.extend(files_paths)
+        if self._load_from_STDIN_option != "" and final_program != "":
+            lis.append(self._load_from_STDIN_option)
 
         print(exep + " ", end='')
         if opt != "":
@@ -91,7 +89,7 @@ class DesktopService(Service):
         for path in files_paths:
             print(path + " ", end='')
         if final_program != "":
-            print(self._load_from_stdin_option)
+            print(self._load_from_STDIN_option)
         else:
             print()
             
