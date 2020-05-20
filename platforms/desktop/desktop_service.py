@@ -57,14 +57,14 @@ class DesktopService(Service):
             else:
                 print("Warning : wrong " +
                       str(OptionDescriptor().__class__.__name__))
-        files_paths = ""
+                
+        
         final_program = ""
+        files_paths = list()
         for p in programs:
             if p is not None:
                 final_program += p.get_programs()
-                program_file = p.get_string_of_files_paths()
-                if program_file is not None:
-                    files_paths += program_file
+                files_paths.extend(p.get_files_paths())
             else:
                 print("Warning : wrong " +
                       str(InputProgram().__class__.__name__))
@@ -73,26 +73,33 @@ class DesktopService(Service):
             return Output("", "Error: executable not found")
 
         exep = str(self._exe_path)
-
         opt = str(option)
 
         lis = list()
         lis.append(exep)
         if opt != "":
             lis.append(opt)
-        lis.append(files_paths[:-1])
-        if self._load_from_stdin_option != "":
-            lis.append(self._load_from_stdin_option)
+        lis.extend(files_paths)
+        if self._load_from_STDIN_option != "" and final_program != "":
+            lis.append(self._load_from_STDIN_option)
 
-        print(exep + " " + opt + " " + files_paths +
-              self._load_from_stdin_option)
-
+        print(exep + " ", end='')
+        if opt != "":
+            print(opt + " ", end='')
+        for path in files_paths:
+            print(path + " ", end='')
+        if final_program != "":
+            print(self._load_from_STDIN_option)
+        else:
+            print()
+            
         start = int(time.time() * 1e+9)
 
         proc = subprocess.Popen(
             lis,
             universal_newlines=True,
             stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
             stdin=subprocess.PIPE,
         )
 
