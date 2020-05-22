@@ -69,15 +69,9 @@ class DLVDesktopServiceTest(unittest.TestCase):
             # out = handler.startSync()
 
             self.assertIsNotNone(out)
-
-            self.assertTrue(isinstance(out, Output),
-                            "Error, result object is not Output")
-
-            self.assertIsNone(out.get_errors(),
-                              "Found error in the Plan\n" + str(out.get_errors()))
-
-            if len(out.get_answer_sets()) == 0:
-                return
+            self.assertTrue(isinstance(out, Output), "Error, result object is not Output")
+            self.assertTrue(out.get_errors() == "", "Found error:\n" + str(out.get_errors()))
+            self.assertTrue(len(out.get_answer_sets()) != 0)
 
             ans = out.get_answer_sets()[0]
 
