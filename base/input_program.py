@@ -38,7 +38,7 @@ class InputProgram(object):
 
     def clear_programs(self):
         """After this method, _programs will be empty."""
-        self._programs = None
+        self._programs = ""
 
     def clear_all(self):
         """After this method, both __files_paths and _programs will be
