@@ -26,10 +26,10 @@ class IDLVParserVisitorImplementation(IDLVParserVisitor):
         self._model_currently_being_visited.get_atoms_as_stringlist().add(ctx.getText())
 
     @staticmethod
-    def parse(answerSets, dlv2Output, two_stageParsing):
-        tokens = CommonTokenStream(IDLVLexer(InputStream(dlv2Output)))
+    def parse(minimalModels, idlvOutput, two_stageParsing):
+        tokens = CommonTokenStream(IDLVLexer(InputStream(idlvOutput)))
         parser = IDLVParser(tokens)
-        visitor = IDLVParserVisitorImplementation(answerSets)
+        visitor = IDLVParserVisitorImplementation(minimalModels)
 
         if not two_stageParsing:
             visitor.visit(parser.output())
