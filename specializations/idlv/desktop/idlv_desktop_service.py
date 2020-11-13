@@ -17,11 +17,8 @@ class IDLVDesktopService(DesktopService):
 
     def start_async(self, callback, programs, options):
         """Calls start_async method of a superclass."""
-        new_options = list(options)
-        new_options.append(OptionDescriptor("--t"))
-
         super(IDLVDesktopService, self).start_async(
-            callback, programs, new_options)
+            callback, programs, options)
 
     def start_sync(self, programs, options):
         """Calls start_sync method of a superclass and returns its output
