@@ -12,7 +12,7 @@ from test.specialization.idlv.path import Path
 
 
 def getPath():
-    path = os.path.join("..", "..", "..", "..", "test-resources", "datalog", "executables", "idlv")
+    path = os.path.join("..", "..", "..", "test-resources", "datalog", "executables", "idlv")
 
     if sys.platform.startswith("win32"):
         if platform.machine().endswith('64'):

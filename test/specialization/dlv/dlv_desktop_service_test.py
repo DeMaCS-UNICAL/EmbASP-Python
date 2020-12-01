@@ -24,7 +24,7 @@ class DLVDesktopServiceTest(unittest.TestCase):
 
     def getPath(self):
         OS = sys.platform
-        path = os.path.join("..", "..", "..", "..",
+        path = os.path.join("..", "..", "..",
                             "test-resources", "asp", "executables", "dlv")
         if OS.startswith("win32"):
             path = os.path.join(path, "dlv.mingw.exe")

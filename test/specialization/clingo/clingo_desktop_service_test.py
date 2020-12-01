@@ -24,7 +24,7 @@ class ClingoDesktopServiceTest(unittest.TestCase):
 
     def getPath(self):
         OS = sys.platform
-        path = os.path.join("..", "..", "..", "..",
+        path = os.path.join("..", "..", "..",
                             "test-resources", "asp", "executables", "clingo")
         if OS.startswith("win32"):
             if sys.maxsize > 2**32:
