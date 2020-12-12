@@ -1,0 +1,3 @@
+[submodule "test-resources"]
+	path = test-resources
+	url = https://github.com/DeMaCS-UNICAL/EmbASP-test-resources.git

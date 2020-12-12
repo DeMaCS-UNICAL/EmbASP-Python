@@ -13,7 +13,7 @@ import platform
 class DLV2DesktopServiceTest(unittest.TestCase):
 
     def getPath(self):
-        path = os.path.join("..", "..", "..", "..", "test-resources", "asp", "executables", "dlv2")
+        path = os.path.join("..", "..", "..", "test-resources", "asp", "executables", "dlv2")
 
         if sys.platform.startswith("win32"):
             if platform.machine().endswith('64'):
