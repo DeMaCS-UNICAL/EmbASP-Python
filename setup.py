@@ -17,4 +17,5 @@ setup(name='EmbASP',
           'Programming Language :: Python :: 2',
           'Programming Language :: Python :: 3',
       ],
+      install_requires=['antlr4-python3-runtime'],
 )
