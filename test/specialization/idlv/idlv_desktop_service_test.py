@@ -5,15 +5,16 @@ import unittest
 from test.specialization.idlv.edge import Edge
 from test.specialization.idlv.path import Path
 
-from languages.datalog.datalog_input_program import DatalogInputProgram
-from languages.datalog.datalog_mapper import DatalogMapper
-from platforms.desktop.desktop_handler import DesktopHandler
-from specializations.idlv.desktop.idlv_desktop_service import \
+from embasp.languages.datalog.datalog_input_program import DatalogInputProgram
+from embasp.languages.datalog.datalog_mapper import DatalogMapper
+from embasp.platforms.desktop.desktop_handler import DesktopHandler
+from embasp.specializations.idlv.desktop.idlv_desktop_service import \
     IDLVDesktopService
 
 
 def getPath():
-    path = os.path.join("..", "..", "..", "test-resources", "datalog", "executables", "idlv")
+    path = os.path.join("test-resources",
+                        "datalog", "executables", "idlv")
 
     if sys.platform.startswith("win32"):
         if platform.machine().endswith('64'):
@@ -66,7 +67,8 @@ class IDLVDesktopServiceTest(unittest.TestCase):
 
             minimalModels = handler.start_sync()
             self.assertIsNotNone(minimalModels)
-            self.assertTrue(minimalModels.get_errors() == "", "Found error:\n" + str(minimalModels.get_errors()))
+            self.assertTrue(minimalModels.get_errors() == "",
+                            "Found error:\n" + str(minimalModels.get_errors()))
             self.assertTrue(len(minimalModels.get_minimal_models()) == 1)
 
             for o in minimalModels.get_minimal_models().pop().get_atoms_as_objectset():

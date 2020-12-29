@@ -2,10 +2,11 @@ import os
 import sys
 import unittest
 
-from base.output import Output
-from languages.asp.asp_input_program import ASPInputProgram
-from platforms.desktop.desktop_handler import DesktopHandler
-from specializations.dlv.desktop.dlv_desktop_service import DLVDesktopService
+from embasp.base.output import Output
+from embasp.languages.asp.asp_input_program import ASPInputProgram
+from embasp.platforms.desktop.desktop_handler import DesktopHandler
+from embasp.specializations.dlv.desktop.dlv_desktop_service import \
+    DLVDesktopService
 
 from .cell import Cell
 from .my_callback import MyCallback
@@ -26,8 +27,7 @@ class DLVDesktopServiceTest(unittest.TestCase):
 
     def getPath(self):
         OS = sys.platform
-        path = os.path.join("..", "..", "..",
-                            "test-resources", "asp", "executables", "dlv")
+        path = os.path.join("test-resources", "asp", "executables", "dlv")
         if OS.startswith("win32"):
             path = os.path.join(path, "dlv.mingw.exe")
         else:
@@ -55,8 +55,7 @@ class DLVDesktopServiceTest(unittest.TestCase):
                         inp.add_object_input(
                             Cell(i, j, self.inputMatrix[i][j]))
 
-            inp.add_files_path(os.path.join(
-                "..", "..", "..", "..", "test-resources", "asp", "sudoku"))
+            inp.add_files_path(os.path.join("test-resources", "asp", "sudoku"))
 
             handler.add_program(inp)
 
@@ -71,8 +70,10 @@ class DLVDesktopServiceTest(unittest.TestCase):
             # out = handler.startSync()
 
             self.assertIsNotNone(out)
-            self.assertTrue(isinstance(out, Output), "Error, result object is not Output")
-            self.assertTrue(out.get_errors() == "", "Found error:\n" + str(out.get_errors()))
+            self.assertTrue(isinstance(out, Output),
+                            "Error, result object is not Output")
+            self.assertTrue(out.get_errors() == "",
+                            "Found error:\n" + str(out.get_errors()))
             self.assertTrue(len(out.get_answer_sets()) != 0)
 
             ans = out.get_answer_sets()[0]

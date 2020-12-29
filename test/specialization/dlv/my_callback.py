@@ -1,6 +1,7 @@
 import threading
-from base.callback import Callback
-from languages.asp.answer_sets import AnswerSets
+
+from embasp.base.callback import Callback
+from embasp.languages.asp.answer_sets import AnswerSets
 
 
 class MyCallback(Callback):

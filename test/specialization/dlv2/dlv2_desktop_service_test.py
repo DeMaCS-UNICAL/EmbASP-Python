@@ -5,18 +5,18 @@ import unittest
 from test.specialization.dlv2.edge import Edge
 from test.specialization.dlv2.path import Path
 
-from base.output import Output
-from languages.asp.asp_input_program import ASPInputProgram
-from languages.asp.asp_mapper import ASPMapper
-from platforms.desktop.desktop_handler import DesktopHandler
-from specializations.dlv2.desktop.dlv2_desktop_service import \
+from embasp.base.output import Output
+from embasp.languages.asp.asp_input_program import ASPInputProgram
+from embasp.languages.asp.asp_mapper import ASPMapper
+from embasp.platforms.desktop.desktop_handler import DesktopHandler
+from embasp.specializations.dlv2.desktop.dlv2_desktop_service import \
     DLV2DesktopService
 
 
 class DLV2DesktopServiceTest(unittest.TestCase):
 
     def getPath(self):
-        path = os.path.join("..", "..", "..", "test-resources",
+        path = os.path.join("test-resources",
                             "asp", "executables", "dlv2")
 
         if sys.platform.startswith("win32"):

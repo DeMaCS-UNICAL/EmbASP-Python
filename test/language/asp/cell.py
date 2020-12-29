@@ -1,5 +1,5 @@
-from languages.asp.symbolic_constant import SymbolicConstant
-from languages.predicate import Predicate
+from embasp.languages.asp.symbolic_constant import SymbolicConstant
+from embasp.languages.predicate import Predicate
 
 
 class Cell(Predicate):

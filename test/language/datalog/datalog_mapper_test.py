@@ -1,8 +1,8 @@
 import unittest
-
-from languages.datalog.datalog_mapper import DatalogMapper
 from test.language.asp.cell import Cell
 from test.language.datalog.arity0 import Arity0
+
+from embasp.languages.datalog.datalog_mapper import DatalogMapper
 
 
 class DatalogMapperTest(unittest.TestCase):

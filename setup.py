@@ -3,7 +3,7 @@
 from setuptools import setup, find_packages
 
 setup(name='EmbASP',
-      version='6.0.0',
+      version='7.5.0',
       description='EmbASP',
       long_description=open('README.md').read(),
       author='Department of Mathematics and Computer Science, University of Calabria',

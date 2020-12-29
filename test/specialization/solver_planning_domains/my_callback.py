@@ -1,6 +1,7 @@
 import threading
-from base.callback import Callback
-from languages.pddl.plan import Plan
+
+from embasp.base.callback import Callback
+from embasp.languages.pddl.plan import Plan
 
 
 class MyCallback(Callback):
