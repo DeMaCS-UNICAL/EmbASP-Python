@@ -16,7 +16,8 @@ from specializations.dlv2.desktop.dlv2_desktop_service import \
 class DLV2DesktopServiceTest(unittest.TestCase):
 
     def getPath(self):
-        path = os.path.join("..", "..", "..", "test-resources", "asp", "executables", "dlv2")
+        path = os.path.join("..", "..", "..", "test-resources",
+                            "asp", "executables", "dlv2")
 
         if sys.platform.startswith("win32"):
             if platform.machine().endswith('64'):
@@ -34,42 +35,41 @@ class DLV2DesktopServiceTest(unittest.TestCase):
                     path = os.path.join(path, "dlv2.mac")
         return path
 
-
     def getEdges(self):
         edges = []
 
-        edges.append(Edge(0,1,1))
-        edges.append(Edge(0,2,4))
-        edges.append(Edge(1,2,2))
-        edges.append(Edge(1,3,4))
-        edges.append(Edge(1,4,1))
-        edges.append(Edge(2,4,4))
-        edges.append(Edge(3,5,6))
-        edges.append(Edge(3,6,1))
-        edges.append(Edge(4,3,1))
-        edges.append(Edge(6,4,5))
-        edges.append(Edge(6,5,9))
-        edges.append(Edge(6,7,1))
-        edges.append(Edge(7,5,2))
+        edges.append(Edge(0, 1, 1))
+        edges.append(Edge(0, 2, 4))
+        edges.append(Edge(1, 2, 2))
+        edges.append(Edge(1, 3, 4))
+        edges.append(Edge(1, 4, 1))
+        edges.append(Edge(2, 4, 4))
+        edges.append(Edge(3, 5, 6))
+        edges.append(Edge(3, 6, 1))
+        edges.append(Edge(4, 3, 1))
+        edges.append(Edge(6, 4, 5))
+        edges.append(Edge(6, 5, 9))
+        edges.append(Edge(6, 7, 1))
+        edges.append(Edge(7, 5, 2))
 
         return edges
 
     def join(self, source, path, sortedPath):
-        for p in path :
-            if(int(p.get_source()) == int(source)) :
+        for p in path:
+            if(int(p.get_source()) == int(source)):
                 sortedPath.append(p.get_destination())
-                if(int(p.get_destination()) == self.destination) :
+                if(int(p.get_destination()) == self.destination):
                     return
                 self.join(p.get_destination(), path, sortedPath)
                 return
 
-    def show(self,path, sum_):
+    def show(self, path, sum_):
         first = True
         print("path = ", end='')
-        for n in path :
-            if not first :
+        for n in path:
+            if not first:
                 print(" - ", end='')
-            else :
+            else:
                 first = False
             print(n, end='')
         print("\nsum = " + str(sum_))
@@ -86,7 +86,8 @@ class DLV2DesktopServiceTest(unittest.TestCase):
             self.source = 0   # source node
             self.destination = 7   # destination node
 
-            rules = "source(" + str(self.source) + "). destination(" + str(self.destination) + ")."
+            rules = "source(" + str(self.source) + \
+                "). destination(" + str(self.destination) + ")."
             rules += "path(X,Y,W) | notPath(X,Y,W) :- source(X), edge(X,Y,W)."
             rules += "path(X,Y,W) | notPath(X,Y,W) :- path(_,X,_), edge(X,Y,W), not to(X)."
             rules += "visited(X) :- path(_,X,_)."
@@ -101,8 +102,10 @@ class DLV2DesktopServiceTest(unittest.TestCase):
             answerSets = handler.start_sync()
 
             self.assertIsNotNone(answerSets)
-            self.assertTrue(isinstance(answerSets, Output),"Error, result object is not Output")
-            self.assertTrue(answerSets.get_errors() == "", "Found error:\n" + str(answerSets.get_errors()))
+            self.assertTrue(isinstance(answerSets, Output),
+                            "Error, result object is not Output")
+            self.assertTrue(answerSets.get_errors() == "",
+                            "Found error:\n" + str(answerSets.get_errors()))
             self.assertTrue(len(answerSets.get_optimal_answer_sets()) != 0)
 
             answerSet = answerSets.get_optimal_answer_sets()[0]
@@ -124,5 +127,6 @@ class DLV2DesktopServiceTest(unittest.TestCase):
         except Exception as e:
             print(str(e))
 
+
 if __name__ == "__main__":
-    unittest.main() 
+    unittest.main()

@@ -1,10 +1,11 @@
 from languages.predicate import Predicate
 
+
 class Path(Predicate):
     predicate_name = "path"
 
     def __init__(self, source=None, destination=None, weight=None):
-        Predicate.__init__(self, [("source"),("destination"),("weight")])
+        Predicate.__init__(self, [("source"), ("destination"), ("weight")])
         self.source = source
         self.destination = destination
         self.weight = weight
@@ -28,4 +29,4 @@ class Path(Predicate):
         self.weight = weight
 
     def __str__(self):
-        return "path(" + str(self.source) + "," + str(self.destination) + "," + str(self.weight) + ")." 
+        return "path(" + str(self.source) + "," + str(self.destination) + "," + str(self.weight) + ")."

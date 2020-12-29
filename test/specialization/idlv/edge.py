@@ -1,10 +1,11 @@
 from languages.predicate import Predicate
 
+
 class Edge(Predicate):
     predicate_name = "edge"
 
     def __init__(self, source=None, destination=None):
-        Predicate.__init__(self, [("source"),("destination")])
+        Predicate.__init__(self, [("source"), ("destination")])
         self.source = source
         self.destination = destination
 

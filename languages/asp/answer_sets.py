@@ -1,8 +1,10 @@
-from .answer_set import AnswerSet
+import sys
 from abc import ABCMeta
+
 from base.output import Output
 from parsers.asp.asp_data_collection import ASPDataCollection
-import sys
+
+from .answer_set import AnswerSet
 
 
 class AnswerSets(Output, ASPDataCollection):

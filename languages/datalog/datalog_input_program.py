@@ -1,5 +1,4 @@
 from base.input_program import InputProgram
-from languages.asp.asp_mapper import ASPMapper
 from languages.datalog.datalog_mapper import DatalogMapper
 
 
@@ -16,7 +15,8 @@ class DatalogInputProgram(InputProgram):
 
         The parameter input_obj is an object to be transformed.
         """
-        self.add_program(DatalogMapper.get_instance().get_string(input_obj) + ".")
+        self.add_program(
+            DatalogMapper.get_instance().get_string(input_obj) + ".")
 
     def add_objects_input(self, input_objs):
         """Transforms a set of objects."""

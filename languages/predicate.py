@@ -2,8 +2,8 @@ from abc import ABCMeta
 
 
 class Predicate(object):
-    """This class have to be implemented by subclasses in order to 
-	represent a predicate."""
+    """This class have to be implemented by subclasses in order to
+        represent a predicate."""
 
     __metaclass__ = ABCMeta
 

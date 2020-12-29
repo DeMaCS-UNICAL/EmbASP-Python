@@ -1,11 +1,12 @@
-from base.service import Service
-from abc import abstractmethod
-from base.option_descriptor import OptionDescriptor
-from base.input_program import InputProgram
-from base.output import Output
 import subprocess
 import time
+from abc import abstractmethod
 from threading import Thread
+
+from base.input_program import InputProgram
+from base.option_descriptor import OptionDescriptor
+from base.output import Output
+from base.service import Service
 
 
 class DesktopService(Service):
@@ -57,8 +58,7 @@ class DesktopService(Service):
             else:
                 print("Warning : wrong " +
                       str(OptionDescriptor().__class__.__name__))
-                
-        
+
         final_program = ""
         files_paths = list()
         for p in programs:
@@ -92,7 +92,7 @@ class DesktopService(Service):
             print(self._load_from_STDIN_option)
         else:
             print()
-            
+
         start = int(time.time() * 1e+9)
 
         proc = subprocess.Popen(

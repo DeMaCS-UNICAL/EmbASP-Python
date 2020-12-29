@@ -1,10 +1,11 @@
 from languages.predicate import Predicate
 
+
 class Path(Predicate):
     predicate_name = "path"
 
     def __init__(self, source=None, destination=None, weight=None):
-        Predicate.__init__(self, [("source"),("destination")])
+        Predicate.__init__(self, [("source"), ("destination")])
         self.source = source
         self.destination = destination
 
