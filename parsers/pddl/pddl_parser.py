@@ -1,12 +1,13 @@
-from .pddl_parser_base.PDDLGrammarLexer import PDDLGrammarLexer
-from .pddl_parser_base.PDDLGrammarParser import PDDLGrammarParser
-from .pddl_parser_base.PDDLGrammarVisitor import PDDLGrammarVisitor
 from antlr4 import PredictionMode
 from antlr4.CommonTokenStream import CommonTokenStream
 from antlr4.error.ErrorListener import ConsoleErrorListener
 from antlr4.error.Errors import RecognitionException
 from antlr4.error.ErrorStrategy import BailErrorStrategy, DefaultErrorStrategy
 from antlr4.InputStream import InputStream
+
+from .pddl_parser_base.PDDLGrammarLexer import PDDLGrammarLexer
+from .pddl_parser_base.PDDLGrammarParser import PDDLGrammarParser
+from .pddl_parser_base.PDDLGrammarVisitor import PDDLGrammarVisitor
 
 
 class PDDLParser(PDDLGrammarVisitor):

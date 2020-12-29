@@ -1,7 +1,7 @@
-from parsers.asp.clingo.clingo_parser_visitor_implementation import ClingoParserVisitorImplementation
-from parsers.asp.dlv.dlv_parser_visitor_implementation import DLVParserVisitorImplementation
-from parsers.asp.dlv2.dlv2_parser_visitor_implementation import DLV2ParserVisitorImplementation
-from parsers.asp.dlvhex.dlvhex_parser_visitor_implementation import DLVHEXParserVisitorImplementation
+from .clingo.clingo_parser_visitor_implementation import ClingoParserVisitorImplementation
+from .dlv.dlv_parser_visitor_implementation import DLVParserVisitorImplementation
+from .dlv2.dlv2_parser_visitor_implementation import DLV2ParserVisitorImplementation
+from .dlvhex.dlvhex_parser_visitor_implementation import DLVHEXParserVisitorImplementation
 
 
 class ASPSolversParser(object):

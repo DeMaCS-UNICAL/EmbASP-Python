@@ -1,4 +1,4 @@
-from parsers.datalog.idlv.idlv_parser_visitor_implementation import IDLVParserVisitorImplementation
+from .idlv.idlv_parser_visitor_implementation import IDLVParserVisitorImplementation
 
 
 class DatalogSolversParser(object):

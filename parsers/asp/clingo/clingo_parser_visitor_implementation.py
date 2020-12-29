@@ -1,12 +1,13 @@
-from .ClingoLexer import ClingoLexer
-from .ClingoParser import ClingoParser
-from .ClingoParserVisitor import ClingoParserVisitor
 from antlr4 import PredictionMode
 from antlr4.CommonTokenStream import CommonTokenStream
 from antlr4.error.ErrorListener import ConsoleErrorListener
 from antlr4.error.Errors import RecognitionException
 from antlr4.error.ErrorStrategy import BailErrorStrategy, DefaultErrorStrategy
 from antlr4.InputStream import InputStream
+
+from .ClingoLexer import ClingoLexer
+from .ClingoParser import ClingoParser
+from .ClingoParserVisitor import ClingoParserVisitor
 
 
 class ClingoParserVisitorImplementation(ClingoParserVisitor):

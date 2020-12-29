@@ -1,12 +1,13 @@
-from .DLVLexer import DLVLexer
-from .DLVParser import DLVParser
-from .DLVParserVisitor import DLVParserVisitor
 from antlr4 import PredictionMode
 from antlr4.CommonTokenStream import CommonTokenStream
 from antlr4.error.ErrorListener import ConsoleErrorListener
 from antlr4.error.Errors import RecognitionException
 from antlr4.error.ErrorStrategy import BailErrorStrategy, DefaultErrorStrategy
 from antlr4.InputStream import InputStream
+
+from .DLVLexer import DLVLexer
+from .DLVParser import DLVParser
+from .DLVParserVisitor import DLVParserVisitor
 
 
 class DLVParserVisitorImplementation(DLVParserVisitor):

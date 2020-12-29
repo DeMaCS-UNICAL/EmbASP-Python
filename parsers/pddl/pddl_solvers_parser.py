@@ -1,4 +1,4 @@
-from parsers.pddl.solver_planning_domains.spd_grammar_visitor_implementation import SPDGrammarVisitorImplementation
+from .solver_planning_domains.spd_grammar_visitor_implementation import SPDGrammarVisitorImplementation
 
 
 class PDDLSolversParser(object):
