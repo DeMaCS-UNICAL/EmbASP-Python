@@ -65,15 +65,13 @@ class SPDDesktopService(DesktopService):
 
     def __post_json_to_url(self, js):
         """Posts a json string given to SPD solver server and returns result."""
+        if sys.version_info < (3, 0):
+            from httplib import HTTPException, HTTPConnection
+        else:
+            from http.client import HTTPException, HTTPConnection
+
         try:
-            if sys.version_info < (3, 0):
-                import httplib
-                connection = httplib.HTTPConnection(
-                    self.__solver_url_resource_name)
-            else:
-                import http.client
-                connection = http.client.HTTPConnection(
-                    self.__solver_url_resource_name)
+            connection = HTTPConnection(self.__solver_url_resource_name)
 
             headers = {'Content-type': 'application/json'}
 
@@ -86,7 +84,7 @@ class SPDDesktopService(DesktopService):
             else:
                 raise PDDLException("HTTP connection error, response code : " + str(
                     response.status) + " response message : " + str(response.reason))
-        except:
+        except HTTPException:
             raise PDDLException("Impossible to perform HTTP connection")
         finally:
             connection.close()
