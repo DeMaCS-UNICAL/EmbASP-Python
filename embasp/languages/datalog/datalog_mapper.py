@@ -1,6 +1,7 @@
-from embasp.languages.asp.symbolic_constant import SymbolicConstant
-from embasp.languages.mapper import Mapper
 from parsers.datalog.datalog_parser import DatalogParser
+
+from ..asp.symbolic_constant import SymbolicConstant
+from ..mapper import Mapper
 
 
 class DatalogMapper(Mapper):

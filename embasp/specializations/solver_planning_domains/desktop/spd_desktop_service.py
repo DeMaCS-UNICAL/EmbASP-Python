@@ -2,11 +2,11 @@ import json
 import sys
 import traceback
 
-from embasp.languages.pddl.pddl_exception import PDDLException
-from embasp.languages.pddl.pddl_input_program import PDDLInputProgram
-from embasp.languages.pddl.pddl_program_type import PDDLProgramType
-from embasp.platforms.desktop.desktop_service import DesktopService
-from embasp.specializations.solver_planning_domains.spd_plan import SPDPlan
+from ....languages.pddl.pddl_exception import PDDLException
+from ....languages.pddl.pddl_input_program import PDDLInputProgram
+from ....languages.pddl.pddl_program_type import PDDLProgramType
+from ....platforms.desktop.desktop_service import DesktopService
+from ..spd_plan import SPDPlan
 
 
 class SPDDesktopService(DesktopService):

@@ -1,9 +1,9 @@
 import sys
 from abc import ABCMeta
 
-from embasp.base.output import Output
 from parsers.asp.asp_data_collection import ASPDataCollection
 
+from ...base.output import Output
 from .answer_set import AnswerSet
 
 

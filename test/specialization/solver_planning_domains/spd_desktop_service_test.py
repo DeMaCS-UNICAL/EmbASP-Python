@@ -1,8 +1,6 @@
 import os
 import time
 import unittest
-from test.specialization.solver_planning_domains.my_callback import MyCallback
-from test.specialization.solver_planning_domains.pick_up import PickUp
 
 from embasp.languages.pddl.pddl_input_program import PDDLInputProgram
 from embasp.languages.pddl.pddl_mapper import PDDLMapper
@@ -10,6 +8,9 @@ from embasp.languages.pddl.pddl_program_type import PDDLProgramType
 from embasp.platforms.desktop.desktop_handler import DesktopHandler
 from embasp.specializations.solver_planning_domains.desktop.spd_desktop_service import \
     SPDDesktopService
+
+from ..solver_planning_domains.my_callback import MyCallback
+from ..solver_planning_domains.pick_up import PickUp
 
 
 class SPDDesktopServiceTest(unittest.TestCase):

@@ -1,7 +1,8 @@
 import unittest
-from test.language.asp.cell import Cell
 
 from embasp.languages.asp.asp_mapper import ASPMapper
+
+from .cell import Cell
 
 
 class ASPMapperTest(unittest.TestCase):

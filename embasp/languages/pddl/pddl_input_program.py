@@ -1,4 +1,4 @@
-from embasp.base.input_program import InputProgram
+from ...base.input_program import InputProgram
 
 
 class PDDLInputProgram(InputProgram):

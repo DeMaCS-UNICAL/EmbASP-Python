@@ -1,4 +1,4 @@
-from embasp.languages.asp.answer_sets import AnswerSets
+from ...languages.asp.answer_sets import AnswerSets
 from parsers.asp.asp_solvers_parser import ASPSolversParser
 
 

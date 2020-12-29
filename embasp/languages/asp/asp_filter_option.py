@@ -1,6 +1,6 @@
 from abc import ABCMeta
 
-from embasp.base.option_descriptor import OptionDescriptor
+from ...base.option_descriptor import OptionDescriptor
 
 
 class ASPFilterOption(OptionDescriptor):

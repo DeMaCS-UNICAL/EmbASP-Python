@@ -1,5 +1,5 @@
-from embasp.platforms.desktop.desktop_service import DesktopService
-from embasp.specializations.dlvhex.dlvhex_answer_sets import DLVHEXAnswerSets
+from ....platforms.desktop.desktop_service import DesktopService
+from ..dlvhex_answer_sets import DLVHEXAnswerSets
 
 
 class DLVHEXDesktopService(DesktopService):

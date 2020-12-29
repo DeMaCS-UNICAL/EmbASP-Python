@@ -1,5 +1,5 @@
-from embasp.platforms.desktop.desktop_service import DesktopService
-from embasp.specializations.clingo.clingo_answer_sets import ClingoAnswerSets
+from ....platforms.desktop.desktop_service import DesktopService
+from ..clingo_answer_sets import ClingoAnswerSets
 
 
 class ClingoDesktopService(DesktopService):

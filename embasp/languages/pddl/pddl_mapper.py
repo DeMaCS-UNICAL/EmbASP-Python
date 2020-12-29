@@ -1,5 +1,6 @@
-from embasp.languages.mapper import Mapper
 from parsers.pddl.pddl_parser import PDDLParser
+
+from ..mapper import Mapper
 
 
 class PDDLMapper(Mapper):

@@ -2,8 +2,6 @@ import os
 import platform
 import sys
 import unittest
-from test.specialization.dlv2.edge import Edge
-from test.specialization.dlv2.path import Path
 
 from embasp.base.output import Output
 from embasp.languages.asp.asp_input_program import ASPInputProgram
@@ -11,6 +9,9 @@ from embasp.languages.asp.asp_mapper import ASPMapper
 from embasp.platforms.desktop.desktop_handler import DesktopHandler
 from embasp.specializations.dlv2.desktop.dlv2_desktop_service import \
     DLV2DesktopService
+
+from .edge import Edge
+from .path import Path
 
 
 class DLV2DesktopServiceTest(unittest.TestCase):

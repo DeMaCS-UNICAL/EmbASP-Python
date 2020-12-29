@@ -1,4 +1,4 @@
-from embasp.languages.asp.asp_mapper import ASPMapper
+from .asp_mapper import ASPMapper
 
 
 class AnswerSet(object):

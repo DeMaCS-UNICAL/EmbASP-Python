@@ -1,5 +1,5 @@
-from embasp.base.input_program import InputProgram
-from embasp.languages.datalog.datalog_mapper import DatalogMapper
+from ...base.input_program import InputProgram
+from .datalog_mapper import DatalogMapper
 
 
 class DatalogInputProgram(InputProgram):

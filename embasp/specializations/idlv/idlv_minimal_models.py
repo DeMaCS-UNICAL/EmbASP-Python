@@ -1,4 +1,4 @@
-from embasp.languages.datalog.minimal_models import MinimalModels
+from ...languages.datalog.minimal_models import MinimalModels
 from parsers.datalog.datalog_solvers_parser import DatalogSolversParser
 
 

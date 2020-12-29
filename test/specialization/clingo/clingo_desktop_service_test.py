@@ -1,14 +1,15 @@
 import os
 import sys
 import unittest
-from test.specialization.clingo.cell import Cell
-from test.specialization.clingo.my_callback import MyCallback
 
 from embasp.base.output import Output
 from embasp.languages.asp.asp_input_program import ASPInputProgram
 from embasp.platforms.desktop.desktop_handler import DesktopHandler
 from embasp.specializations.clingo.desktop.clingo_desktop_service import \
     ClingoDesktopService
+
+from .cell import Cell
+from .my_callback import MyCallback
 
 
 class ClingoDesktopServiceTest(unittest.TestCase):

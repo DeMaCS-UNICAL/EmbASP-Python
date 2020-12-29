@@ -1,4 +1,4 @@
-from embasp.languages.datalog.datalog_mapper import DatalogMapper
+from .datalog_mapper import DatalogMapper
 
 
 class MinimalModel(object):

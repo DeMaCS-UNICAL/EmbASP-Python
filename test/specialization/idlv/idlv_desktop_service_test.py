@@ -2,14 +2,15 @@ import os
 import platform
 import sys
 import unittest
-from test.specialization.idlv.edge import Edge
-from test.specialization.idlv.path import Path
 
 from embasp.languages.datalog.datalog_input_program import DatalogInputProgram
 from embasp.languages.datalog.datalog_mapper import DatalogMapper
 from embasp.platforms.desktop.desktop_handler import DesktopHandler
 from embasp.specializations.idlv.desktop.idlv_desktop_service import \
     IDLVDesktopService
+
+from .edge import Edge
+from .path import Path
 
 
 def getPath():

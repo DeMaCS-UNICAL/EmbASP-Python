@@ -1,7 +1,6 @@
-from embasp.base.option_descriptor import OptionDescriptor
-from embasp.platforms.desktop.desktop_service import DesktopService
-from embasp.specializations.dlv2.dlv2_answer_sets import DLV2AnswerSets
-from embasp.specializations.idlv.idlv_minimal_models import IDLVMinimalModels
+from ....base.option_descriptor import OptionDescriptor
+from ....platforms.desktop.desktop_service import DesktopService
+from ..idlv_minimal_models import IDLVMinimalModels
 
 
 class IDLVDesktopService(DesktopService):

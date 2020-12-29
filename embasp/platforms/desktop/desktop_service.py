@@ -3,10 +3,10 @@ import time
 from abc import abstractmethod
 from threading import Thread
 
-from embasp.base.input_program import InputProgram
-from embasp.base.option_descriptor import OptionDescriptor
-from embasp.base.output import Output
-from embasp.base.service import Service
+from ...base.input_program import InputProgram
+from ...base.option_descriptor import OptionDescriptor
+from ...base.output import Output
+from ...base.service import Service
 
 
 class DesktopService(Service):

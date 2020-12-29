@@ -1,8 +1,8 @@
 from abc import ABCMeta
 
-from embasp.base.output import Output
 from parsers.datalog.datalog_data_collection import DatalogDataCollection
 
+from ...base.output import Output
 from .minimal_model import MinimalModel
 
 

@@ -1,6 +1,6 @@
 from abc import ABCMeta
 
-from embasp.base.output import Output
+from ...base.output import Output
 
 from .action import Action
 from .pddl_mapper import PDDLMapper

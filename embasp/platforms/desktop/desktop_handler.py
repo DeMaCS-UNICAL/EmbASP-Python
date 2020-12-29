@@ -1,4 +1,4 @@
-from embasp.base.handler import Handler
+from ...base.handler import Handler
 
 
 class DesktopHandler(Handler):

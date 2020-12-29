@@ -1,4 +1,4 @@
-from embasp.languages.pddl.plan import Plan
+from ...languages.pddl.plan import Plan
 from parsers.pddl.pddl_solvers_parser import PDDLSolversParser
 
 

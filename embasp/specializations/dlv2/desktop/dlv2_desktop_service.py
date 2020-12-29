@@ -1,5 +1,5 @@
-from embasp.platforms.desktop.desktop_service import DesktopService
-from embasp.specializations.dlv2.dlv2_answer_sets import DLV2AnswerSets
+from ....platforms.desktop.desktop_service import DesktopService
+from ..dlv2_answer_sets import DLV2AnswerSets
 
 
 class DLV2DesktopService(DesktopService):

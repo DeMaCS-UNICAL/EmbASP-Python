@@ -1,5 +1,6 @@
-from embasp.languages.asp.answer_sets import AnswerSets
 from parsers.asp.asp_solvers_parser import ASPSolversParser
+
+from ...languages.asp.answer_sets import AnswerSets
 
 
 class ClingoAnswerSets(AnswerSets):

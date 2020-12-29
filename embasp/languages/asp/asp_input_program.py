@@ -1,5 +1,5 @@
-from embasp.base.input_program import InputProgram
-from embasp.languages.asp.asp_mapper import ASPMapper
+from ...base.input_program import InputProgram
+from .asp_mapper import ASPMapper
 
 
 class ASPInputProgram(InputProgram):

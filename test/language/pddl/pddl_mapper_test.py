@@ -1,5 +1,5 @@
 import unittest
-from test.specialization.solver_planning_domains.pick_up import PickUp
+from .pick_up import PickUp
 
 from embasp.languages.pddl.pddl_mapper import PDDLMapper
 

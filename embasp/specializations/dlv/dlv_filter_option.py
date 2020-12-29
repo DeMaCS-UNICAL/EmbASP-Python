@@ -1,4 +1,4 @@
-from embasp.languages.asp.asp_filter_option import ASPFilterOption
+from ...languages.asp.asp_filter_option import ASPFilterOption
 
 
 class DLVFilterOption(ASPFilterOption):
