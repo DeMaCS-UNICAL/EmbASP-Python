@@ -6,7 +6,6 @@ from antlr4.error.Errors import RecognitionException
 from antlr4.error.ErrorStrategy import BailErrorStrategy, DefaultErrorStrategy
 from antlr4.InputStream import InputStream
 
-from languages.datalog.minimal_model import MinimalModel
 from .IDLVLexer import IDLVLexer
 from .IDLVParser import IDLVParser
 from .IDLVParserVisitor import IDLVParserVisitor
@@ -18,8 +17,7 @@ class IDLVParserVisitorImplementation(IDLVParserVisitor):
         self._model_currently_being_visited = None
 
     def visitMinimal_model(self, ctx):
-        self._model_currently_being_visited = MinimalModel(set())
-        self._models.add_minimal_model(self._model_currently_being_visited)
+        self._models.add_minimal_model()
         return self.visitChildren(ctx)
 
     def visitPredicate_atom(self, ctx):
