@@ -2,13 +2,14 @@ import os
 import platform
 import sys
 import unittest
+from test.specialization.idlv.edge import Edge
+from test.specialization.idlv.path import Path
 
 from languages.datalog.datalog_input_program import DatalogInputProgram
 from languages.datalog.datalog_mapper import DatalogMapper
 from platforms.desktop.desktop_handler import DesktopHandler
-from specializations.idlv.desktop.idlv_desktop_service import IDLVDesktopService
-from test.specialization.idlv.edge import Edge
-from test.specialization.idlv.path import Path
+from specializations.idlv.desktop.idlv_desktop_service import \
+    IDLVDesktopService
 
 
 def getPath():

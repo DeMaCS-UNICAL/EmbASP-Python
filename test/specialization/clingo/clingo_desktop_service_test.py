@@ -1,12 +1,14 @@
-import unittest
-from languages.asp.asp_input_program import ASPInputProgram
-from platforms.desktop.desktop_handler import DesktopHandler
-from base.output import Output
-import sys
 import os
-from specializations.clingo.desktop.clingo_desktop_service import ClingoDesktopService
+import sys
+import unittest
 from test.specialization.clingo.cell import Cell
 from test.specialization.clingo.my_callback import MyCallback
+
+from base.output import Output
+from languages.asp.asp_input_program import ASPInputProgram
+from platforms.desktop.desktop_handler import DesktopHandler
+from specializations.clingo.desktop.clingo_desktop_service import \
+    ClingoDesktopService
 
 
 class ClingoDesktopServiceTest(unittest.TestCase):

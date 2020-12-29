@@ -1,14 +1,17 @@
-import unittest
-from shortest_path.Edge import Edge
-from platforms.desktop.desktop_handler import DesktopHandler
-from specializations.dlv2.desktop.dlv2_desktop_service import DLV2DesktopService
-from shortest_path.Path import Path
-from languages.asp.asp_mapper import ASPMapper
-from languages.asp.asp_input_program import ASPInputProgram
-from base.output import Output
-import sys
 import os
 import platform
+import sys
+import unittest
+from test.specialization.dlv2.edge import Edge
+from test.specialization.dlv2.path import Path
+
+from base.output import Output
+from languages.asp.asp_input_program import ASPInputProgram
+from languages.asp.asp_mapper import ASPMapper
+from platforms.desktop.desktop_handler import DesktopHandler
+from specializations.dlv2.desktop.dlv2_desktop_service import \
+    DLV2DesktopService
+
 
 class DLV2DesktopServiceTest(unittest.TestCase):
 

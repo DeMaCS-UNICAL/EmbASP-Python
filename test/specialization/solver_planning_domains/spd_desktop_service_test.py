@@ -1,14 +1,15 @@
-import unittest
 import os
-from platforms.desktop.desktop_handler import DesktopHandler
-from specializations.solver_planning_domains.desktop.spd_desktop_service import SPDDesktopService
-from languages.pddl.pddl_input_program import PDDLInputProgram
-from languages.pddl.pddl_program_type import PDDLProgramType
-from languages.pddl.pddl_mapper import PDDLMapper
 import time
-
+import unittest
 from test.specialization.solver_planning_domains.my_callback import MyCallback
 from test.specialization.solver_planning_domains.pick_up import PickUp
+
+from languages.pddl.pddl_input_program import PDDLInputProgram
+from languages.pddl.pddl_mapper import PDDLMapper
+from languages.pddl.pddl_program_type import PDDLProgramType
+from platforms.desktop.desktop_handler import DesktopHandler
+from specializations.solver_planning_domains.desktop.spd_desktop_service import \
+    SPDDesktopService
 
 
 class SPDDesktopServiceTest(unittest.TestCase):
