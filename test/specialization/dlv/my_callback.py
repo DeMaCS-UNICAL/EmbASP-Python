@@ -17,7 +17,7 @@ class MyCallback(Callback):
             self.lock.notifyAll()
         self.lock.release()
 
-    def await(self):
+    def wait_the_end(self):
         self.lock.acquire()
         while self.count > 0:
             self.lock.wait()

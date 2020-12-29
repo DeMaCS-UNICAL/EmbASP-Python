@@ -62,7 +62,7 @@ class DLVDesktopServiceTest(unittest.TestCase):
 
             handler.start_async(mc)
 
-            mc.await()
+            mc.wait_the_end()
 
             out = mc.get_output()
 

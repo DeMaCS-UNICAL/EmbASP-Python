@@ -51,7 +51,7 @@ class SPDDesktopServiceTest(unittest.TestCase):
 
                 handler.start_async(mc)
 
-                mc.await()
+                mc.wait_the_end()
 
                 plan = mc.get_output()
 
