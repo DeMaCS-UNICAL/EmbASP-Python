@@ -5,7 +5,7 @@ class InputProgram(object):
         """Creates new programs setting space as default separator."""
         self._programs = ""  # Where programs data is stored
         self.__files_paths = list()  # Where associated files are stored
-        self._separator = " "  # Used as separator for programs
+        self._separator = "\n"  # Used as separator for programs
 
     def add_object_input(self, input_obj):
         raise "Functionality not implemented"
