@@ -1,0 +1,17 @@
+[project]
+name = "embasp-python"
+version = "8.0.0"
+description = "EmbASP is a framework for the integration of Logic Programming in external systems"
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "antlr4-python3-runtime==4.7"
+]
+
+[project.urls]
+Homepage = "https://www.mat.unical.it/calimeri/projects/embasp"
