@@ -15,6 +15,7 @@ setup(name='EmbASP',
           'Development Status :: 5 - Production/Stable',
           'License :: OSI Approved :: MIT License',
           'Programming Language :: Python :: 3',
+          'Programming Language :: Python :: 2',
       ],
       install_requires=['antlr4-python3-runtime==4.7'],
       )
