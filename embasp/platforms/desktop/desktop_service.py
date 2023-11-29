@@ -53,8 +53,8 @@ class DesktopService(Service):
         option = ""
         for o in options:
             if o is not None:
-                option += o.get_options()
-                option += o.get_separator()
+                option += str(o.get_options())
+                option += str(o.get_separator())
             else:
                 print("Warning : wrong " +
                       str(OptionDescriptor().__class__.__name__))
