@@ -50,11 +50,10 @@ class DesktopService(Service):
     def start_sync(self, programs, options):
         """Start a new process for the _exe_path and starts solving
         syncronously."""
-        option = ""
+        option = []
         for o in options:
             if o is not None:
-                option += str(o.get_options())
-                option += str(o.get_separator())
+                option.append(str(o.get_options()))
             else:
                 print("Warning : wrong " +
                       str(OptionDescriptor().__class__.__name__))
@@ -73,19 +72,17 @@ class DesktopService(Service):
             return Output("", "Error: executable not found")
 
         exep = str(self._exe_path)
-        opt = str(option)
 
         lis = list()
         lis.append(exep)
-        if opt != "":
-            lis.append(opt)
+        lis.extend(option)
         lis.extend(files_paths)
         if self._load_from_STDIN_option != "" and final_program != "":
             lis.append(self._load_from_STDIN_option)
 
         print(exep + " ", end='')
-        if opt != "":
-            print(opt + " ", end='')
+        if option != []:
+            print(str(option) + " ", end='')
         for path in files_paths:
             print(path + " ", end='')
         if final_program != "":
