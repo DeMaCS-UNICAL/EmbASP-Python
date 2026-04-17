@@ -92,19 +92,19 @@ class DesktopService(Service):
 
         start = int(time.time() * 1e+9)
 
-        proc = subprocess.Popen(
+        with subprocess.Popen(
             lis,
             universal_newlines=True,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             stdin=subprocess.PIPE,
-        )
+        ) as proc:
 
-        output, error = proc.communicate(final_program)
+            output, error = proc.communicate(final_program)
 
-        end = int(time.time() * 1e+9)
+            end = int(time.time() * 1e+9)
 
-        print("Total time : " + str(end - start))
-        print("")
+            print("Total time : " + str(end - start))
+            print("")
 
-        return self._get_output(output, error)
+            return self._get_output(output, error)
