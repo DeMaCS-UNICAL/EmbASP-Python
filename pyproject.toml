@@ -11,7 +11,7 @@ classifiers = [
     "Programming Language :: Python :: 2",
 ]
 dependencies = [
-    "antlr4-python3-runtime==4.7"
+    "antlr4-python3-runtime==4.13.1"
 ]
 
 [project.urls]
